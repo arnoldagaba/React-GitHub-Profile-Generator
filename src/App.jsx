@@ -11,7 +11,7 @@ function App() {
   return (
     <MantineProvider theme={{ colorScheme: 'light' }} withGlobalStyles withNormalizeCSS>
       <ThemeProvider>
-        <div className="min-h-screen flex flex-col">
+        <div className="wrapper min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">
             <Routes>

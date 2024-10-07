@@ -11,8 +11,8 @@ const Header = () => {
       <Link to="/" className="text-xl font-bold">
         GitHub Profile Generator
       </Link>
-      <nav>
-        <Link to="/" className="mr-4">
+      <nav className='flex justify-between items-center'>
+        <Link to="/" className="search-btn font-semibold mr-7 bg-blue-800 px-5 py-2 rounded-lg">
           Search
         </Link>
         <button onClick={toggleTheme} className="focus:outline-none">

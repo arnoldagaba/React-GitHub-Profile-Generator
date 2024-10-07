@@ -2,16 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
 /* Light Mode (default) */
 body.light {
 	background-color: white;
 	color: black;
 }
 
+body.light .home {
+    background: white;
+}
+
 /* Dark Mode */
 body.dark {
 	background-color: #1a202c;
-	color: white;
+	color: rgb(130, 130, 130);
 }
+
+body.dark .search-btn {
+    background: black;
+    color: white;
+}
+
+body.dark .intro-name {
+    color: black;
+}
+
+body.dark .intro-btn {
+    background: black;
+}
+
 
 /* Optional: Add specific Tailwind utility classes here for custom colors */
