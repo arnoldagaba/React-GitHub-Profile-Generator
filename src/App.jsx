@@ -4,14 +4,10 @@ import Profile from './pages/Profile';
 import Repositories from './components/Repositories';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { ThemeProvider } from './context/ThemeContext';
-import { MantineProvider } from '@mantine/core';
 
 function App() {
   return (
-    <MantineProvider theme={{ colorScheme: 'light' }} withGlobalStyles withNormalizeCSS>
-      <ThemeProvider>
-        <div className="wrapper min-h-screen flex flex-col">
+        <div className="wrapper min-h-screen flex flex-col bg-white text-black dark:bg-[#1a202c] dark:text-[rgb(130, 130, 130)]">
           <Header />
           <main className="flex-grow">
             <Routes>
@@ -22,8 +18,6 @@ function App() {
           </main>
           <Footer />
         </div>
-      </ThemeProvider>
-    </MantineProvider>
   );
 }
 

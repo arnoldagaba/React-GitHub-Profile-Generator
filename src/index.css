@@ -5,24 +5,11 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Light Mode (default) */
-body.light {
-	background-color: white;
-	color: black;
-}
-
-body.light .home {
-    background: white;
-}
 
 /* Dark Mode */
-body.dark {
-	background-color: #1a202c;
-	color: rgb(130, 130, 130);
-}
 
 body.dark .search-btn {
     background: black;

@@ -7,12 +7,12 @@ const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <header className={`p-4 flex justify-between items-center ${theme === 'light' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-black'}`}>
+    <header className={`p-4 flex justify-between items-center ${theme === 'light' ? 'bg-gray-100 text-black backdrop-blur-3xl' : 'bg-gray-800 text-white'}`}>
       <Link to="/" className="text-xl font-bold">
         GitHub Profile Generator
       </Link>
       <nav className='flex justify-between items-center'>
-        <Link to="/" className="search-btn font-semibold mr-7 bg-blue-800 px-5 py-2 rounded-lg">
+        <Link to="/" className="search-btn font-semibold mr-7 bg-black text-white px-5 py-2 rounded-lg dark:text-black dark:bg-white">
           Search
         </Link>
         <button onClick={toggleTheme} className="focus:outline-none">
