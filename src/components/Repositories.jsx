@@ -31,12 +31,12 @@ const Repositories = () => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  if (loading) return <div className="text-center mt-10">Loading...</div>;
+  if (loading) return <div className="text-center mt-10 text-black dark:text-white">Loading...</div>;
   if (error) return <div className="text-center mt-10 text-red-500">{error}</div>;
 
   return (
-    <div className="max-w-4xl mx-auto mt-10 p-4 bg-white shadow-lg rounded-lg">
-      <h1 className="text-2xl font-bold mb-4">Repositories</h1>
+    <div className="max-w-max mx-auto mt-10 p-4 bg-white shadow-lg rounded-lg dark:bg-slate-700">
+      <h1 className="text-2xl font-bold mb-4 dark:text-white">Repositories</h1>
 
       <ul>
         {currentRepos.map((repo) => (
@@ -45,7 +45,7 @@ const Repositories = () => {
               href={repo.html_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-black dark:text-slate-100 hover:underline"
             >
               {repo.name}
             </a>
