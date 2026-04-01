@@ -1,49 +1,40 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { renderHook, act } from '@testing-library/react';
-import { ThemeProvider, ThemeContext } from '../context/ThemeContext';
-import { useContext } from 'react';
+import { describe, it, expect, beforeEach } from "vite-plus/test";
+import { renderHook, act } from "@testing-library/react";
+import { ThemeProvider, ThemeContext } from "../context/ThemeContext";
+import { useContext } from "react";
 
 beforeEach(() => {
   localStorage.clear();
 });
 
-describe('ThemeContext', () => {
-  it('defaults to light theme', () => {
-    const { result } = renderHook(
-      () => useContext(ThemeContext),
-      {
-        wrapper: ({ children }) => <ThemeProvider>{children}</ThemeProvider>,
-      },
-    );
-    expect(result.current.theme).toBe('light');
+describe("ThemeContext", () => {
+  it("defaults to light theme", () => {
+    const { result } = renderHook(() => useContext(ThemeContext), {
+      wrapper: ({ children }) => <ThemeProvider>{children}</ThemeProvider>,
+    });
+    expect(result.current.theme).toBe("light");
   });
 
-  it('toggles theme from light to dark', () => {
-    const { result } = renderHook(
-      () => useContext(ThemeContext),
-      {
-        wrapper: ({ children }) => <ThemeProvider>{children}</ThemeProvider>,
-      },
-    );
+  it("toggles theme from light to dark", () => {
+    const { result } = renderHook(() => useContext(ThemeContext), {
+      wrapper: ({ children }) => <ThemeProvider>{children}</ThemeProvider>,
+    });
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('dark');
+    expect(result.current.theme).toBe("dark");
   });
 
-  it('toggles theme from dark back to light', () => {
-    const { result } = renderHook(
-      () => useContext(ThemeContext),
-      {
-        wrapper: ({ children }) => <ThemeProvider>{children}</ThemeProvider>,
-      },
-    );
-    act(() => {
-      result.current.toggleTheme();
+  it("toggles theme from dark back to light", () => {
+    const { result } = renderHook(() => useContext(ThemeContext), {
+      wrapper: ({ children }) => <ThemeProvider>{children}</ThemeProvider>,
     });
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('light');
+    act(() => {
+      result.current.toggleTheme();
+    });
+    expect(result.current.theme).toBe("light");
   });
 });
