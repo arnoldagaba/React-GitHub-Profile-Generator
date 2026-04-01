@@ -5,24 +5,5 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-
-
-/* Dark Mode */
-
-body.dark .search-btn {
-    background: black;
-    color: white;
-}
-
-body.dark .intro-name {
-    color: black;
-}
-
-body.dark .intro-btn {
-    background: black;
-}
-
-
-/* Optional: Add specific Tailwind utility classes here for custom colors */
